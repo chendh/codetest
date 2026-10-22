@@ -25,3 +25,29 @@
 -63 -67
 49 8 -6 -98 65 -80 92
 -51 94 22 -60 -63 -25 37 -6 76
+
+## 解答
+``` C++
+#include <iostream>
+using namespace std;
+
+int main(){
+    string s;
+    string output[100];
+    cin >> s;
+
+    int i = -1;
+
+    while (s!="-9999"){
+        i++;
+        output[i] = s;
+        cin >> s;
+    }
+
+    while (i>=0){
+        cout << output[i] << " ";
+        i--;
+    }
+    return 0;
+}
+```
