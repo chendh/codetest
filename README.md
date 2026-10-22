@@ -1,7 +1,7 @@
 ### 程式設計能力檢定題庫
 
 ## b001. 週期性的連接符號
-讓使用者輸入一個正整數 ，接著依底下規則輸出一行字串。
+讓使用者輸入一個正整數 n ，接著依底下規則輸出一行字串。
 
 - 從數字 1 到 n，依序出現在字串中
 - 每個數字的後面會連接三種符號（+，-，*）之一
@@ -29,3 +29,34 @@
 1+2--3***4+5--6***
 1+2--3***4+5--6***7+
 1+2--3***4+5--6***7+8--9***
+
+### 解答
+```
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n;
+    int r;
+    cout << "Input a positive number n: ";
+    cin >> n;
+
+    for (int i=1; i<=n; i++){
+        r = i % 3;
+
+        cout << i;
+        switch (r){
+            case 1: 
+                cout << "+";
+                break;
+            case 2:
+                cout << "--";
+                break;
+            case 0:
+                cout << "***";
+                break;
+        }
+    }
+    return 0;
+}
+```
